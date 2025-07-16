@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: leaderboard-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://leaderboard:leaderboard123@cluster0.f8xcpgm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: PORT
+        value: 5000
+
